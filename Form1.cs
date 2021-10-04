@@ -26,5 +26,24 @@ namespace laba_2_1
         {
 
         }
+
+        private void CalcButton_Click(object sender, EventArgs e)
+        {
+            int n=int.Parse(Price.Text);
+            int rub = n / 100;
+            int kop = (n % 100);
+            if (rub == 0)
+            {
+                MessageBox.Show($"{kop} коп.");
+            }
+            if (kop == 0)
+            {
+                MessageBox.Show($"{rub} руб.");
+            }
+            if (kop != 0 && rub != 0)
+            {
+                MessageBox.Show($"{rub} руб. {kop} коп.");
+            }
+        }
     }
 }
