@@ -30,8 +30,8 @@ namespace laba_2_1
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.Price = new System.Windows.Forms.TextBox();
+            this.CalcButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -45,23 +45,23 @@ namespace laba_2_1
             this.label1.Text = "Введите стоимость в копейках";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // textBox1
+            // Price
             // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.textBox1.Location = new System.Drawing.Point(12, 31);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(202, 23);
-            this.textBox1.TabIndex = 1;
+            this.Price.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.Price.Location = new System.Drawing.Point(12, 31);
+            this.Price.Name = "Price";
+            this.Price.Size = new System.Drawing.Size(202, 23);
+            this.Price.TabIndex = 1;
             // 
-            // button1
+            // CalcButton
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.button1.Location = new System.Drawing.Point(12, 60);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(202, 23);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Рассчитать";
-            this.button1.UseVisualStyleBackColor = false;
+            this.CalcButton.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.CalcButton.Location = new System.Drawing.Point(12, 60);
+            this.CalcButton.Name = "CalcButton";
+            this.CalcButton.Size = new System.Drawing.Size(202, 23);
+            this.CalcButton.TabIndex = 2;
+            this.CalcButton.Text = "Рассчитать";
+            this.CalcButton.UseVisualStyleBackColor = false;
             // 
             // Form1
             // 
@@ -69,8 +69,8 @@ namespace laba_2_1
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(230, 105);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.CalcButton);
+            this.Controls.Add(this.Price);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
@@ -85,8 +85,8 @@ namespace laba_2_1
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox Price;
+        private System.Windows.Forms.Button CalcButton;
     }
 }
 
