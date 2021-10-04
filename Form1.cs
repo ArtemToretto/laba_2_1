@@ -29,20 +29,29 @@ namespace laba_2_1
 
         private void CalcButton_Click(object sender, EventArgs e)
         {
-            int n=int.Parse(Price.Text);
-            int rub = n / 100;
-            int kop = (n % 100);
-            if (rub == 0)
+            int no = 0;
+            bool proverka = int.TryParse(Price.Text, out no);
+            if (proverka)
             {
-                MessageBox.Show($"{kop} коп.");
+                int n = int.Parse(Price.Text);
+                int rub = n / 100;
+                int kop = (n % 100);
+                if (rub == 0)
+                {
+                    MessageBox.Show($"{kop} коп.");
+                }
+                else if (kop == 0)
+                {
+                    MessageBox.Show($"{rub} руб.");
+                }
+                else if (kop != 0 && rub != 0)
+                {
+                    MessageBox.Show($"{rub} руб. {kop} коп.");
+                }
             }
-            if (kop == 0)
+            else
             {
-                MessageBox.Show($"{rub} руб.");
-            }
-            if (kop != 0 && rub != 0)
-            {
-                MessageBox.Show($"{rub} руб. {kop} коп.");
+                MessageBox.Show("Данные не введены, либо введены некорректно!");
             }
         }
     }
