@@ -14,7 +14,9 @@ namespace laba_2_1
     {
         public Form1()
         {
+
             InitializeComponent();
+            Price.Text = Properties.Settings.Default.n.ToString();
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
@@ -26,7 +28,6 @@ namespace laba_2_1
         {
 
         }
-
         private void CalcButton_Click(object sender, EventArgs e)
         {
             int no = 0;
@@ -48,6 +49,8 @@ namespace laba_2_1
                 {
                     MessageBox.Show($"{rub} руб. {kop} коп.");
                 }
+                Properties.Settings.Default.n = n;
+                Properties.Settings.Default.Save();
             }
             else
             {
